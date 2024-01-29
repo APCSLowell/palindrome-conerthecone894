@@ -37,13 +37,28 @@ public void tester()
 }
 public boolean palindrome(String word)
 {
-  //your code here
-  return false;
+    String placeholder = word.toLowerCase();
+    String cool = "";
+      //lowercase version of the original string & string to be checked
+    
+    for(int i = 0; i < placeholder.length(); i++){
+      if((int)placeholder.charAt(i) >= 97 && (int)placeholder.charAt(i) <= 122)
+        cool += placeholder.charAt(i);
+    }
+      //making the string that will be checked
+    
+    for(int i = 0; i < cool.length(); i++){
+      if(cool.charAt(i) != cool.charAt(cool.length()-(1+i)))
+        return false;
+    }
+    return true;
+    //checking the new string & returning the result
 }
-public String reverse(String str)
+/* public String reverse(String str)
 {
     String sNew = new String();
     //your code here
     return sNew;
-}
+} */
+  
 }
